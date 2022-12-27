@@ -6,12 +6,13 @@
 
 num = input('Введите число: ')
 
-num = num.replace(",", "")
+# num = num.replace(",", "").replace(".", "").replace("-", "")
 
 result = 0
 
 for char in num:
-        result += int(char)
+        if char.isdigit(): 
+                result += int(char)
 
 print(result)
 
